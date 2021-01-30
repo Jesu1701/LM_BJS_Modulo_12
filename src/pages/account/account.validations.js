@@ -1,9 +1,18 @@
-import { Validators, createFormValidation } from '@lemoncode/fonk';
+import {
+  Validators,
+  createFormValidation
+} from '@lemoncode/fonk';
 
 const validationsSchema = {
   field: {
-    type: [ Validators.required ],
-    alias: [ Validators.required ],
+    type: [{
+      validator: Validators.required,
+      message: 'Campo requerido',
+    }],
+    alias: [{
+      validator: Validators.required,
+      message: 'Campo requerido',
+    }],
   },
 };
 
